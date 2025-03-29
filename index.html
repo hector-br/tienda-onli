@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Online</title>
+    <link rel="stylesheet" href="stylesMobile.css">
+</head>
+<body>
+    <section class="contenedor-principal">
+        <nav class="barra-navegacion">
+            <div class="logo"><p class="titulo-pagina">Tienda Online</p></div>
+            <button onclick="cerrarCarrito()" class="button-carrito"><div class="icono-carrito"></div></button>
+        </nav>
+    
+        <!-- Barra de búsqueda -->
+        <div class="contenedor-busqueda">
+            <input type="text" id="barra-busqueda" placeholder="Buscar productos..." />
+            <button id="boton-busqueda">Buscar</button>
+        </div>
+        <h1 class="titulo-productos">Productos</h1>
+        <div class="contenedor-categorias">
+            <div class="categorias">    
+                <h2 class="title-categorias ">Categorias</h2>
+                <button class="categoria sudadera" onclick="verSudaderas()" id="verSudaderas">Sudaderas</button>
+                <button class="categoria short">Shorts</button>
+                <button class="categoria camisa">Camisas</button>
+                <button class="categoria chamarra">Chamarras</button>
+                <button class="categoria pantalones">Pantalones</button>
+         
+            </div>
+            <div class="contenedor-productos" id="productos-container">
+                <!-- Los productos se generarán dinámicamente desde JavaScript -->
+        
+            </div>
+        </div>
+    
+        
+    
+        <!-- Ventana para mostrar la imagen grande -->
+        <div id="vista-grande" class="vista-grande" onclick="vistaGrande(event)">
+            <div class="contenedor-vista-grande">
+                <div class="separador-uno">
+                    <span class="cerrar">&times;</span>
+                    <img id="imagen" class="imagen-grande">
+                </div>
+                <div class="separador-dos">
+                    <div id="descripcion-producto" class="descripcion-producto"></div>
+                    <div id="info-producto" class="info-producto">
+                        <p id="precio-producto"></p>
+                        <p id="talla-modal"></p>
+                        <select id="tallas-producto">
+                            <option value="">Seleccionar talla</option>
+                        </select>
+                        <div class="icono-carrito carrito-añadir"></div>
+                        <button id="btn-agregar" onclick="agregarAlCarrito()">Añadir al carrito</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Ventana del Carrito -->
+        <div class="carrito ventana-carrito-compras" id="ventana-carrito">
+            <h2 class="titulo-carrito">Carrito de Compras</h2>
+            <ul id="carrito-lista"></ul>
+            <p class="carrito-total">Total: $<span id="total">0.00</span></p>
+            <button onclick="vaciarCarrito()" class="vaciar-carrito">Vaciar Carrito</button>
+            <button onclick="cerrarCarrito()" class="cerrar-carrito">Cerrar Carrito</button>
+            <button onclick="confirmarCompra()" class="button-comprar">Confirmar Compra</button>
+     
+        </div>
+    
+    
+        <!-- ventana emergente para continuar con el pago-->
+    <div id="ventana-pago" style="display: none;">
+        <div class="contenido-ventana-pago">
+            <h2 class="titulo-ventana-pago">Para continuar completa los campos</h2>
+            
+            <!-- Formulario para ingresar el correo -->
+            <label for="correo" class="correo-electronico">Correo Electrónico:</label>
+            <input type="email" id="correo" placeholder="Ingresa tu correo electrónico" class="campo-correo" required >
+            
+            <h3 class="titulo-metodo-pago">Selecciona tu método de pago</h3>
+            <input type="radio" name="metodo" value="Tarjeta de Crédito" id="tarjeta">
+            <label for="tarjeta" class="titulo-tarjeta">Tarjeta de Crédito</label><br>
+            
+            <input type="radio" name="metodo" value="PayPal" id="paypal">
+            <label for="paypal" class="titulo-paypal">PayPal</label><br>
+            
+            <input type="radio" name="metodo" value="Transferencia bancaria" id="transferencia">
+            <label for="transferencia" class="titulo-transferencia">Transferencia bancaria</label><br>
+            
+            <button id="confirmar-pago">Confirmar Compra</button>
+            <button onclick="cerrarVentanaPago()">Cerrar</button>
+        </div>
+    </div>
+    
+    <footer class="footer">
+        <div class="contenedor-footer-uno">
+            <div class="svg icono-copring"></div>
+            <p class="parrafo-footer">2025 Todos los derechos reservados</p>
+        </div>
+        <div class="contactos">
+            <p class="soporte">Soporte a cliente</p>
+            <div class="contactos-numero">
+                <div class="svg icono-wattsApp"></div>
+                <a href="https://web.whatsapp.com/" class="numero">5523421333</p>
+            </div>
+        </div>
+    </footer>
+    
+    </section>
+    <script src="index.js"></script>
+</body>
+</html>
