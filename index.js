@@ -55,6 +55,7 @@ function mostrarProductos(productos) {
                  data-price="${producto.precio}" 
                  data-size="${producto.talla}">
             <p>${producto.nombre}</p>
+            <p>$${producto.precio}</p>
         `;
         contenedorProductos.appendChild(divProducto);
     });
@@ -283,3 +284,12 @@ function vaciarCarrito() {
     actualizarCarrito();
 }
 
+function verSudaderas(){
+    var ocultarProductos =  document.getElementsByClassName("contenedor-productos")[0];
+    if(ocultarProductos.style.visibility == "hidden"){
+        ocultarProductos.style.visibility = "visible";
+    }else{
+        ocultarProductos.style.visibility = "hidden";
+    }   
+    
+}
