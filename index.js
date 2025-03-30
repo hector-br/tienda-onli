@@ -54,7 +54,7 @@ function mostrarProductos(productos) {
                  data-description="${producto.descripcion}" 
                  data-price="${producto.precio}" 
                  data-size="${producto.talla}">
-            <p>${producto.nombre}</p>
+            <p>${producto.descripcion}</p>
             <p>$${producto.precio}</p>
         `;
         contenedorProductos.appendChild(divProducto);
@@ -284,12 +284,249 @@ function vaciarCarrito() {
     actualizarCarrito();
 }
 
+
+
+// Función para mostrar los productos en la página
+function mostrarProductosSudaderas(productos) {
+    const contenedorProductos = document.getElementById('contendor-boton-busqueda')
+    contenedorProductos.innerHTML = '';
+    var resultadoProducto;
+    resultadoProducto = productos.filter(producto => producto.nombre === 'Sudadera');
+    resultadoProducto.forEach(producto => {
+        const divProducto = document.createElement('div');
+        divProducto.classList.add('producto');
+        divProducto.innerHTML = `
+            <img src="${producto.imagen}" alt="${producto.nombre}" class="imagen" onclick="verImagenGrande(this)" 
+                 data-img="${producto.imagen}" 
+                 data-description="${producto.descripcion}" 
+                 data-price="${producto.precio}" 
+                 data-size="${producto.talla}">
+            <p>${producto.nombre}</p>
+            <p>$${producto.precio}</p>
+        `;
+        contenedorProductos.appendChild(divProducto);
+    });
+};
+
+
+ 
+// Llamar a la función para mostrar los productos al cargar la página
 function verSudaderas(){
+    mostrarProductosSudaderas(productos);
     var ocultarProductos =  document.getElementsByClassName("contenedor-productos")[0];
-    if(ocultarProductos.style.visibility == "hidden"){
+    var mostrarSudaderas =  document.getElementsByClassName("contenedor-busqueda-botones")[0];
+    if(ocultarProductos.style.visibility === "hidden" && mostrarSudaderas.style.visibility === 'visible'){
         ocultarProductos.style.visibility = "visible";
+        mostrarSudaderas.style.visibility = "hidden";
+        mostrarSudaderas.style.display = 'none';
+        ocultarProductos.style.display = 'grid';
+
     }else{
         ocultarProductos.style.visibility = "hidden";
-    }   
-    
+        mostrarSudaderas.style.visibility = "visible";
+        mostrarSudaderas.style.display = 'grid';
+        ocultarProductos.style.display = 'none';
+    }
 }
+
+// Función para mostrar los productos en la página
+function mostrarProductosShorts(productos) {
+    const contenedorProductos = document.getElementById('contendor-boton-busqueda')
+    contenedorProductos.innerHTML = '';
+    var resultadoProducto;
+    resultadoProducto = productos.filter(producto => producto.nombre === 'Short');
+    resultadoProducto.forEach(producto => {
+        const divProducto = document.createElement('div');
+        divProducto.classList.add('producto');
+        divProducto.innerHTML = `
+            <img src="${producto.imagen}" alt="${producto.nombre}" class="imagen" onclick="verImagenGrande(this)" 
+                 data-img="${producto.imagen}" 
+                 data-description="${producto.descripcion}" 
+                 data-price="${producto.precio}" 
+                 data-size="${producto.talla}">
+            <p>${producto.nombre}</p>
+            <p>$${producto.precio}</p>
+        `;
+        contenedorProductos.appendChild(divProducto);
+    });
+};
+function verShorts(){
+    mostrarProductosShorts(productos);
+    var ocultarProductos =  document.getElementsByClassName("contenedor-productos")[0];
+    var mostrarShorts =  document.getElementsByClassName("contenedor-busqueda-botones")[0];
+    if(ocultarProductos.style.visibility === "hidden" && mostrarShorts.style.visibility === 'visible'){
+        ocultarProductos.style.visibility = "visible";
+        mostrarShorts.style.visibility = "hidden";
+        mostrarShorts.style.display = 'none';
+        ocultarProductos.style.display = 'grid';
+
+    }else{
+        ocultarProductos.style.visibility = "hidden";
+        mostrarShorts.style.visibility = "visible";
+        mostrarShorts.style.display = 'grid';
+        ocultarProductos.style.display = 'none';
+    }
+}
+
+
+// Función para mostrar los productos en la página
+function mostrarProductosChamarras(productos) {
+    const contenedorProductos = document.getElementById('contendor-boton-busqueda')
+    contenedorProductos.innerHTML = '';
+    var resultadoProducto;
+    resultadoProducto = productos.filter(producto => producto.nombre === 'Chamarra');
+    resultadoProducto.forEach(producto => {
+        const divProducto = document.createElement('div');
+        divProducto.classList.add('producto');
+        divProducto.innerHTML = `
+            <img src="${producto.imagen}" alt="${producto.nombre}" class="imagen" onclick="verImagenGrande(this)" 
+                 data-img="${producto.imagen}" 
+                 data-description="${producto.descripcion}" 
+                 data-price="${producto.precio}" 
+                 data-size="${producto.talla}">
+            <p>${producto.nombre}</p>
+            <p>$${producto.precio}</p>
+        `;
+        contenedorProductos.appendChild(divProducto);
+    });
+};
+function verChamarras(){
+    mostrarProductosChamarras(productos);
+    var ocultarProductos =  document.getElementsByClassName("contenedor-productos")[0];
+    var mostrarShorts =  document.getElementsByClassName("contenedor-busqueda-botones")[0];
+    if(ocultarProductos.style.visibility === "hidden" && mostrarShorts.style.visibility === 'visible'){
+        ocultarProductos.style.visibility = "visible";
+        mostrarShorts.style.visibility = "hidden";
+        mostrarShorts.style.display = 'none';
+        ocultarProductos.style.display = 'grid';
+
+    }else{
+        ocultarProductos.style.visibility = "hidden";
+        mostrarShorts.style.visibility = "visible";
+        mostrarShorts.style.display = 'grid';
+        ocultarProductos.style.display = 'none';
+    }
+}
+
+
+// Función para mostrar los productos en la página
+function mostrarProductosPantalones(productos) {
+    const contenedorProductos = document.getElementById('contendor-boton-busqueda')
+    contenedorProductos.innerHTML = '';
+    var resultadoProducto;
+    resultadoProducto = productos.filter(producto => producto.nombre === 'Pantalones');
+    resultadoProducto.forEach(producto => {
+        const divProducto = document.createElement('div');
+        divProducto.classList.add('producto');
+        divProducto.innerHTML = `
+            <img src="${producto.imagen}" alt="${producto.nombre}" class="imagen" onclick="verImagenGrande(this)" 
+                 data-img="${producto.imagen}" 
+                 data-description="${producto.descripcion}" 
+                 data-price="${producto.precio}" 
+                 data-size="${producto.talla}">
+            <p>${producto.nombre}</p>
+            <p>$${producto.precio}</p>
+        `;
+        contenedorProductos.appendChild(divProducto);
+    });
+};
+function verPantalones(){
+    mostrarProductosPantalones(productos);
+    var ocultarProductos =  document.getElementsByClassName("contenedor-productos")[0];
+    var mostrarShorts =  document.getElementsByClassName("contenedor-busqueda-botones")[0];
+    if(ocultarProductos.style.visibility === "hidden" && mostrarShorts.style.visibility === 'visible'){
+        ocultarProductos.style.visibility = "visible";
+        mostrarShorts.style.visibility = "hidden";
+        mostrarShorts.style.display = 'none';
+        ocultarProductos.style.display = 'grid';
+
+    }else{
+        ocultarProductos.style.visibility = "hidden";
+        mostrarShorts.style.visibility = "visible";
+        mostrarShorts.style.display = 'grid';
+        ocultarProductos.style.display = 'none';
+    }
+}
+
+
+// Función para mostrar los productos en la página
+function mostrarProductosCamisas(productos) {
+    const contenedorProductos = document.getElementById('contendor-boton-busqueda')
+    contenedorProductos.innerHTML = '';
+    var resultadoProducto;
+    resultadoProducto = productos.filter(producto => producto.nombre === 'Camisa');
+    resultadoProducto.forEach(producto => {
+        const divProducto = document.createElement('div');
+        divProducto.classList.add('producto');
+        divProducto.innerHTML = `
+            <img src="${producto.imagen}" alt="${producto.nombre}" class="imagen" onclick="verImagenGrande(this)" 
+                 data-img="${producto.imagen}" 
+                 data-description="${producto.descripcion}" 
+                 data-price="${producto.precio}" 
+                 data-size="${producto.talla}">
+            <p>${producto.nombre}</p>
+            <p>$${producto.precio}</p>
+        `;
+        contenedorProductos.appendChild(divProducto);
+    });
+};
+function verCamisas(){
+    mostrarProductosCamisas(productos);
+    var ocultarProductos =  document.getElementsByClassName("contenedor-productos")[0];
+    var mostrarShorts =  document.getElementsByClassName("contenedor-busqueda-botones")[0];
+    if(ocultarProductos.style.visibility === "hidden" && mostrarShorts.style.visibility === 'visible'){
+        ocultarProductos.style.visibility = "visible";
+        mostrarShorts.style.visibility = "hidden";
+        mostrarShorts.style.display = 'none';
+        ocultarProductos.style.display = 'grid';
+
+    }else{
+        ocultarProductos.style.visibility = "hidden";
+        mostrarShorts.style.visibility = "visible";
+        mostrarShorts.style.display = 'grid';
+        ocultarProductos.style.display = 'none';
+    }
+}
+
+
+// Función para mostrar los productos en la página
+function mostrarProductosVestidos(productos) {
+    const contenedorProductos = document.getElementById('contendor-boton-busqueda')
+    contenedorProductos.innerHTML = '';
+    var resultadoProducto;
+    resultadoProducto = productos.filter(producto => producto.nombre === 'Vestidos');
+    resultadoProducto.forEach(producto => {
+        const divProducto = document.createElement('div');
+        divProducto.classList.add('producto');
+        divProducto.innerHTML = `
+            <img src="${producto.imagen}" alt="${producto.nombre}" class="imagen" onclick="verImagenGrande(this)" 
+                 data-img="${producto.imagen}" 
+                 data-description="${producto.descripcion}" 
+                 data-price="${producto.precio}" 
+                 data-size="${producto.talla}">
+            <p>${producto.nombre}</p>
+            <p>$${producto.precio}</p>
+        `;
+        contenedorProductos.appendChild(divProducto);
+    });
+};
+function verVestidos(){
+    mostrarProductosVestidos(productos);
+    var ocultarProductos =  document.getElementsByClassName("contenedor-productos")[0];
+    var mostrarShorts =  document.getElementsByClassName("contenedor-busqueda-botones")[0];
+    if(ocultarProductos.style.visibility === "hidden" && mostrarShorts.style.visibility === 'visible'){
+        ocultarProductos.style.visibility = "visible";
+        mostrarShorts.style.visibility = "hidden";
+        mostrarShorts.style.display = 'none';
+        ocultarProductos.style.display = 'grid';
+
+    }else{
+        ocultarProductos.style.visibility = "hidden";
+        mostrarShorts.style.visibility = "visible";
+        mostrarShorts.style.display = 'grid';
+        ocultarProductos.style.display = 'none';
+    }
+}
+
+
+

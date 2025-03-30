@@ -81,6 +81,8 @@ button{
     margin-top: 10px;
     display:flex;
     /* display: none; */
+    /* grid-template-columns: repeat(6, 1fr); */
+    /* gap: 1em; */
 }
 .contenedor-productos {
     margin: 0 auto;
@@ -89,6 +91,7 @@ button{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2em;
+    visibility: visible;
 }
 .titulo-productos{
     width: 100%;
@@ -321,6 +324,18 @@ ul{
 }
 .campo-correo{
   padding: 5px 10px;
+}
+
+/* busqueda con botnoes */
+.contenedor-busqueda-botones, .contenedor-busqueda-botonesa{
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1em;
+    display:none;
+    visibility: hidden;
 }
 
 @media(min-width:1024px){
