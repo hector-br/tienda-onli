@@ -3,39 +3,51 @@ let total = 0;
 
 // arreglo de productos
 const productos = [
-    { nombre: 'Sueter', descripcion: 'Sueter de alta calidad', precio: 159.9, imagen: 'imagenes/camisa.jpg', talla: 'S, M, L, XL' },
+    { nombre: 'Camisa', descripcion: 'Camisa manga larga', precio: 259.99, imagen: 'imagenes/camisa.jpg', talla: 'S, M, L, XL' },
     { nombre: 'Camisa', descripcion: 'Camisa de alta calidad', precio: 159.9, imagen: 'imagenes/camisa2.jpg', talla: 'S, M, L, XL' },
-    { nombre: 'Camisa', descripcion: 'Camisa de alta calidad', precio: 159.9, imagen: 'imagenes/camisa3.jpg', talla: 'S, M, L, XL' },
-    { nombre: 'Camisa', descripcion: 'Sudadera de alta calidad', precio: 159.9, imagen: 'imagenes/camisa4.jpg', talla: 'S, M, L, XL' },
-    { nombre: 'Chamarra', descripcion: 'Chaqueta Negra', precio: 39.99, imagen: 'imagenes/chamarra.jpg', talla: '28, 30, 32, 34' },
-    { nombre: 'Chamarra', descripcion: 'Chamarra.', precio: 49.99, imagen: 'imagenes/chamarra2.jpg', talla: 'M, L' },
-    { nombre: 'Chamarra', descripcion: 'Chamarra.', precio: 49.99, imagen: 'imagenes/chamarra3.jpg', talla: 'M, L' },
-    { nombre: 'Chamarra', descripcion: 'Chamarra', precio: 49.99, imagen: 'imagenes/chamarra4.jpg', talla: 'M, L' },
-    { nombre: 'Chamarra', descripcion: 'Chamarra', precio: 49.99, imagen: 'imagenes/chamarra5.jpg', talla: 'M, L' },
-    { nombre: 'Chamarra', descripcion: 'Chamarra', precio: 49.99, imagen: 'imagenes/chamarra6.jpg', talla: 'M, L' },
-    { nombre: 'Chamarra', descripcion: 'Chamarra', precio: 49.99, imagen: 'imagenes/chamarra7.jpg', talla: 'M, L' },
-    { nombre: 'Chamarra', descripcion: 'Chamarra', precio: 49.99, imagen: 'imagenes/chamarra8.jpg', talla: 'M, L' },
-    { nombre: 'Chamarra', descripcion: 'Chamarra', precio: 49.99, imagen: 'imagenes/chamarra9.jpg', talla: 'M, L' },
-    { nombre: 'Short', descripcion: 'Short.', precio: 49.99, imagen: 'imagenes/short.jpg', talla: 'M, L' },
-    { nombre: 'Short', descripcion: 'Short.', precio: 49.99, imagen: 'imagenes/short2.jpg', talla: 'M, L' },
-    { nombre: 'Short', descripcion: 'Short', precio: 49.99, imagen: 'imagenes/short3.jpg', talla: 'M, L' },
-    { nombre: 'Short', descripcion: 'Short', precio: 49.99, imagen: 'imagenes/short4.jpg', talla: 'M, L' },
-    { nombre: 'Short', descripcion: 'Short', precio: 49.99, imagen: 'imagenes/short5.jpg', talla: 'M, L' },
-    { nombre: 'Short', descripcion: 'Short', precio: 49.99, imagen: 'imagenes/short6.jpg', talla: 'M, L' },
-    { nombre: 'Sudadera', descripcion: 'Sudadera', precio: 49.99, imagen: 'imagenes/sudadera.jpg', talla: 'M, L' },
-    { nombre: 'Sudadera', descripcion: 'Sudadera', precio: 49.99, imagen: 'imagenes/sudadera2.jpg', talla: 'M, L' },
-    { nombre: 'Sudadera', descripcion: 'Sudadera', precio: 49.99, imagen: 'imagenes/sudadera3.jpg', talla: 'M, L' },
-    { nombre: 'Sudadera', descripcion: 'Sudadera', precio: 49.99, imagen: 'imagenes/sudadera4.jpg', talla: 'M, L' },
-    { nombre: 'Sudadera', descripcion: 'Sudadera', precio: 49.99, imagen: 'imagenes/sudadera5.jpg', talla: 'M, L' },
-    { nombre: 'Sudadera', descripcion: 'Sudadera', precio: 49.99, imagen: 'imagenes/sudadera6.jpg', talla: 'M, L' },
-    { nombre: 'Sudadera', descripcion: 'Sudadera', precio: 49.99, imagen: 'imagenes/sudadera7.jpg', talla: 'M, L' },
-    { nombre: 'Sueter', descripcion: 'Sueter', precio: 49.99, imagen: 'imagenes/sueter.jpg', talla: 'M, L' },
-    { nombre: 'Sueter', descripcion: 'Sueter', precio: 49.99, imagen: 'imagenes/sueter2.jpg', talla: 'M, L' },
-    { nombre: 'Camisa mujer', descripcion: 'Camisa de mujer', precio: 49.99, imagen: 'imagenes/camisaM1.jpg', talla: 'M, L' },
-    { nombre: 'Camisa mujer', descripcion: 'Camisa de mujer', precio: 49.99, imagen: 'imagenes/camisaM2.jpg', talla: 'M, L' },
-    { nombre: 'Camiseta mujer', descripcion: 'Camiseta de mujer, comoda color verde', precio: 49.99, imagen: 'imagenes/camisetaM1.jpg', talla: 'M, L' },
-    { nombre: 'Sueter mujer', descripcion: 'Sueter para mujer, comodo y de calidad', precio: 49.99, imagen: 'imagenes/sudaderaM1.jpg', talla: 'M, L' },
-    { nombre: 'Sueter mujer', descripcion: 'Sueter para mujer, caliente y comodo.', precio: 49.99, imagen: 'imagenes/sudaderaM2.jpg', talla: 'M, L' },
+    { nombre: 'Camisa', descripcion: 'Camisa de alta calidad', precio: 150.0, imagen: 'imagenes/camisa3.jpg', talla: 'S, M, L, XL' },
+    { nombre: 'Camisa', descripcion: 'Camisa azul', precio: 170.45, imagen: 'imagenes/camisa4.jpg', talla: 'S, M, L, XL' },
+    { nombre: 'Chamarra', descripcion: 'Chamarra blanca', precio: 439.99, imagen: 'imagenes/chamarra.jpg', talla: '28, 30, 32, 34' },
+    { nombre: 'Chamarra', descripcion: 'Chamarra negra', precio: 400, imagen: 'imagenes/chamarra2.jpg', talla: 'M, L, X' },
+    { nombre: 'Chamarra', descripcion: 'Chamarra cafe', precio: 350.34, imagen: 'imagenes/chamarra3.jpg', talla: 'M, L, X' },
+    { nombre: 'Chamarra', descripcion: 'Chamarra roja', precio: 299, imagen: 'imagenes/chamarra4.jpg', talla: 'M, L, X' },
+    { nombre: 'Chamarra', descripcion: 'Chamarra negra', precio: 500.50, imagen: 'imagenes/chamarra5.jpg', talla: 'M, L, X' },
+    { nombre: 'Chamarra', descripcion: 'Chamarra azul', precio: 620.89, imagen: 'imagenes/chamarra6.jpg', talla: 'M, L, XS' },
+    { nombre: 'Chamarra', descripcion: 'Chamarra roja', precio: 499, imagen: 'imagenes/chamarra7.jpg', talla: 'M, L, x, XS' },
+    { nombre: 'Chamarra', descripcion: 'Chamarra mostasa', precio: 400.50, imagen: 'imagenes/chamarra8.jpg', talla: 'M, L, X, XS' },
+    { nombre: 'Chamarra', descripcion: 'Chamarra combinada', precio: 700.99, imagen: 'imagenes/chamarra9.jpg', talla: 'M, L, Xl' },
+    { nombre: 'Short', descripcion: 'Short claro', precio: 130.99, imagen: 'imagenes/short.jpg', talla: 'M, L, XL' },
+    { nombre: 'Short', descripcion: 'Short blanco', precio: 199.99, imagen: 'imagenes/short2.jpg', talla: 'M, L, X' },
+    { nombre: 'Short', descripcion: 'Short verde', precio: 200.99, imagen: 'imagenes/short3.jpg', talla: 'M, L, Xs, XL' },
+    { nombre: 'Short', descripcion: 'Short combinado', precio: 150, imagen: 'imagenes/short4.jpg', talla: 'M, L, XL' },
+    { nombre: 'Short', descripcion: 'Short azul', precio: 170.45, imagen: 'imagenes/short5.jpg', talla: 'M, L, X' },
+    { nombre: 'Short', descripcion: 'Short azul/negro', precio: 199.99, imagen: 'imagenes/short6.jpg', talla: 'M, L, XS' },
+    { nombre: 'Sudadera', descripcion: 'Sudadera rosa', precio: 249.99, imagen: 'imagenes/sudadera.jpg', talla: 'M, L, XL' },
+    { nombre: 'Sudadera', descripcion: 'Sudadera',      precio: 349.99, imagen: 'imagenes/sudadera2.jpg', talla: 'M, L, Xs' },
+    { nombre: 'Sudadera', descripcion: 'Sudadera azul', precio: 229.99, imagen: 'imagenes/sudadera3.jpg', talla: 'M, L, X, XL' },
+    { nombre: 'Sudadera', descripcion: 'Sudadera azul/blanco', precio: 549.99, imagen: 'imagenes/sudadera4.jpg', talla: 'M, L, Xs' },
+    { nombre: 'Sudadera', descripcion: 'Sudadera azul/naranja', precio: 449.99, imagen: 'imagenes/sudadera5.jpg', talla: 'M, L, XL, XS' },
+    { nombre: 'Sudadera', descripcion: 'Sudadera negra', precio: 349.99, imagen: 'imagenes/sudadera6.jpg', talla: 'M, L, XL, X' },
+    { nombre: 'Sudadera', descripcion: 'Sudadera blanca', precio: 359.99, imagen: 'imagenes/sudadera7.jpg', talla: 'M, L, X' },
+    { nombre: 'Sueter', descripcion: 'Sueter negro', precio: 249.99, imagen: 'imagenes/sueter.jpg', talla: 'M, L, X' },
+    { nombre: 'Sueter', descripcion: 'Sueter blanco', precio: 349.99, imagen: 'imagenes/sueter2.jpg', talla: 'M, L, x' },
+    { nombre: 'Camisa', descripcion: 'Camisa de mujer', precio: 429.99, imagen: 'imagenes/camisaM1.jpg', talla: 'M, L, XS' },
+    { nombre: 'Camisa', descripcion: 'Camisa de mujer', precio: 239.99, imagen: 'imagenes/camisaM2.jpg', talla: 'M, L' },
+    { nombre: 'Camiseta mujer', descripcion: 'Camiseta de mujer, comoda color verde', precio: 199.99, imagen: 'imagenes/camisetaM1.jpg', talla: 'M, L, X' },
+    { nombre: 'Sueter mujer', descripcion: 'Sueter para mujer, comodo y de calidad', precio: 349.99, imagen: 'imagenes/sudaderaM1.jpg', talla: 'M, L, XL, XS, X' },
+    { nombre: 'Sueter mujer', descripcion: 'Sueter para mujer, caliente y comodo.', precio: 678.55, imagen: 'imagenes/sudaderaM2.jpg', talla: 'M, L, X' },
+    { nombre: 'Pantalon', descripcion: 'Pantalon para mujer', precio: 678.55, imagen: 'imagenes/pantalon.jpg', talla: 'M, L, X' },
+    { nombre: 'Pantalon', descripcion: 'Pantalon para mujer', precio: 678.55, imagen: 'imagenes/pantalon2.jpg', talla: 'M, L, X' },
+    { nombre: 'Pantalon', descripcion: 'Pantalon para mujer', precio: 678.55, imagen: 'imagenes/pantalon3.jpg', talla: 'M, L, X' },
+    { nombre: 'Pantalon', descripcion: 'Pantalon para hombre', precio: 678.55, imagen: 'imagenes/pantalon4.jpg', talla: 'M, L, X' },
+    { nombre: 'Pantalon', descripcion: 'Pantalon para mujer', precio: 678.55, imagen: 'imagenes/pantalon5.jpg', talla: 'M, L, X' },
+    { nombre: 'Pantalon', descripcion: 'Pantalon ', precio: 678.55, imagen: 'imagenes/pantalon7.jpg', talla: 'M, L, X' },
+    { nombre: 'Pantalon', descripcion: 'Pantalon azul', precio: 678.55, imagen: 'imagenes/pantalon8.jpg', talla: 'M, L, X' },
+    { nombre: 'Vestido', descripcion: 'Vestido ', precio: 678.55, imagen: 'imagenes/vestido.jpg', talla: 'M, L, X' },
+    { nombre: 'Vestido', descripcion: 'Vestido ', precio: 678.55, imagen: 'imagenes/vestido2.jpg', talla: 'M, L, X' },
+    { nombre: 'Vestido', descripcion: 'Vestido ', precio: 678.55, imagen: 'imagenes/vestido3.jpg', talla: 'M, L, X' },
+    { nombre: 'Vestido', descripcion: 'Vestido ', precio: 678.55, imagen: 'imagenes/vestido4.jpg', talla: 'M, L, X' },
+    { nombre: 'Vestido', descripcion: 'Vestido ', precio: 678.55, imagen: 'imagenes/vestido5.jpg', talla: 'M, L, X' },
 ];
 
 
@@ -210,56 +222,29 @@ function cerrarVentanaPago() {
 
 // Función para manejar la confirmación de compra
 document.getElementById('confirmar-pago').addEventListener('click', () => {
-    const correo = document.getElementById('correo').value;
-    if (!correo || !validarCorreo(correo)) {
-        alert("El correo electrónico ingresado no es válido.");
-        return;
-    }
-
-    const metodoPago = obtenerMetodoPago();
-    if (!metodoPago) {
-        alert("Selecciona un método de pago válido.");
-        return;
-    }
-
-    // Mostrar la confirmación de compra
+    // Generar el mensaje con los detalles de los productos en el carrito
     const mensaje = carrito.map(producto => `${producto.nombre} - Talla: ${producto.talla} - $${producto.precio}`).join("\n");
     const totalCompra = carrito.reduce((sum, producto) => sum + producto.precio, 0);
 
+    // Mostrar la confirmación de compra
     alert(`
         Detalles de la compra:
         ${mensaje}
         
         Total: $${totalCompra.toFixed(2)}
         
-        Método de pago: ${metodoPago}
-        
         Compra confirmada. ¡Gracias por tu compra!
     `);
-
-    // Guardar el historial de compras en el localStorage
-    guardarHistorialDeCompra(correo, carrito, metodoPago);
 
     // Vaciar el carrito después de la compra
     vaciarCarrito();
     cerrarVentanaPago();
 });
 
-// Función para validar el correo
-function validarCorreo(correo) {
-    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return regex.test(correo);
-}
-
-// Función para obtener el método de pago seleccionado
+// Función para obtener el método de pago (sin validación)
 function obtenerMetodoPago() {
     const opciones = document.getElementsByName('metodo');
-    for (let i = 0; i < opciones.length; i++) {
-        if (opciones[i].checked) {
-            return opciones[i].value;
-        }
-    }
-    return null; // Si no se seleccionó un método
+    return metodo; // Retornar un valor predeterminado o simplemente dejarlo así
 }
 
 // Función para guardar el historial de compra
@@ -414,7 +399,7 @@ function mostrarProductosPantalones(productos) {
     const contenedorProductos = document.getElementById('contendor-boton-busqueda')
     contenedorProductos.innerHTML = '';
     var resultadoProducto;
-    resultadoProducto = productos.filter(producto => producto.nombre === 'Pantalones');
+    resultadoProducto = productos.filter(producto => producto.nombre === 'Pantalon');
     resultadoProducto.forEach(producto => {
         const divProducto = document.createElement('div');
         divProducto.classList.add('producto');
@@ -494,7 +479,7 @@ function mostrarProductosVestidos(productos) {
     const contenedorProductos = document.getElementById('contendor-boton-busqueda')
     contenedorProductos.innerHTML = '';
     var resultadoProducto;
-    resultadoProducto = productos.filter(producto => producto.nombre === 'Vestidos');
+    resultadoProducto = productos.filter(producto => producto.nombre === 'Vestido');
     resultadoProducto.forEach(producto => {
         const divProducto = document.createElement('div');
         divProducto.classList.add('producto');
