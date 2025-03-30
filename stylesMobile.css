@@ -9,6 +9,9 @@
     margin: 0 auto;
 
 }
+body{
+    background-color: white;
+}
 .barra-navegacion{
     width: 100%;
     display: flex;
@@ -31,17 +34,19 @@
     text-transform: uppercase;
 }
 button{
-    padding: 2px 4px;
+    padding: 1px 3px;
     background-color:orange;
-    border-radius:10px;
+    border-radius:5px;
     border: none;
     margin-left: 5px;
     cursor: pointer;
     float: right;
     margin-top: 1px;
+    font-size: 7px;
 }
 .button-carrito{
     display: flex;
+    font-size: 12px;
 }
 .icono-carrito{
     background-image: url(imagenes/iconos/carrito.svg);
@@ -75,7 +80,9 @@ button{
 }
 #boton-busqueda{
     background-color: black;
-    color: white    ;
+    color: white;
+    font-size: 10px;
+    padding: 3px 6px;
 }
 .title-categorias{
     display: none;
@@ -86,11 +93,13 @@ button{
     margin-top: 10px;
     display:grid;
     /* display: none; */
-    grid-template-columns: repeat(4, 1fr);
+    /* grid-template-columns: repeat(4, 1fr); */
+    grid-template-columns:repeat(auto-fit, minmax(30%, 1fr));
     gap:1em;
 }
 .categoria{
     padding: 3px 8px;
+    font-size: 9px;
 }
 .contenedor-productos {
     margin: 0 auto;
@@ -168,8 +177,8 @@ button{
     text-align: start;
     padding: 10px;
     transition: transform 0.3s;
-  }
-  .cerrar{
+}
+.cerrar{
     /* display: block; */
     width: 30%;
     height: 30%;
@@ -177,7 +186,7 @@ button{
     position: absolute;
     top: 20px;
     left: 30px;
-  }
+}
   
 .separador-dos{
     width: 90%;
@@ -286,10 +295,10 @@ ul{
 .ventana-carrito-compras {
     display: none;
     position: fixed;
-    top: 0;
+    top: 15px;
     right: 0;
-    width: 70%;
-    height: 100%;
+    width: 90%;
+    height: 90%;
     background-color: white;
     box-shadow: -2px 0 10px rgba(0, 0, 0, 0.9);
     padding: 20px 10px;
@@ -317,8 +326,8 @@ ul{
 .vaciar-carrito, .cerrar-carrito{
     background-color: fuchsia;
     color: white;
-    padding: 1px 3px;
-    font-size: 11px;
+    padding: 0px 3px;
+    font-size: 8px;
     float: left;
 }
 .button-comprar{
@@ -384,11 +393,12 @@ ul{
         color: black;
     }
     button{
-        padding: 5px 8px;
+        padding: 4px 9px;
         border-radius:10px;
         margin-left: 5px;
         float: right;
         margin-top: 2px;
+        font-size: 10px;
     }
     .button-carrito{
         display: flex;
@@ -541,7 +551,7 @@ ul{
     }    
     .carrito-añadir{
         margin-left: 3%;
-        margin-top: .2%;
+        margin-top: .5%;
     }
     #btn-agregar{
         background-color: green;
@@ -552,6 +562,7 @@ ul{
         text-align: center;
         color: white;
         letter-spacing: 1px;
+        font-size: 12px;
     }
     .footer{
         margin-top: 50px;
