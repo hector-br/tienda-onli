@@ -36,9 +36,9 @@ const productos = [
     { nombre: 'Camiseta mujer', descripcion: 'Camiseta de mujer, comoda color verde', precio: 199.99, imagen: 'imagenes/camisetaM1.jpg', talla: 'M, L, X' },
     { nombre: 'Sueter mujer', descripcion: 'Sueter para mujer, comodo y de calidad', precio: 349.99, imagen: 'imagenes/sudaderaM1.jpg', talla: 'M, L, XL, XS, X' },
     { nombre: 'Sueter mujer', descripcion: 'Sueter para mujer, caliente y comodo.', precio: 678.55, imagen: 'imagenes/sudaderaM2.jpg', talla: 'M, L, X' },
-    { nombre: 'Pantalon', descripcion: 'Pantalon para mujer', precio: 678.55, imagen: 'imagenes/pantalon.jpg', talla: 'M, L, X' },
-    { nombre: 'Pantalon', descripcion: 'Pantalon para mujer', precio: 678.55, imagen: 'imagenes/pantalon2.jpg', talla: 'M, L, X' },
-    { nombre: 'Pantalon', descripcion: 'Pantalon para mujer', precio: 678.55, imagen: 'imagenes/pantalon3.jpg', talla: 'M, L, X' },
+    { nombre: 'Pantalon', descripcion: 'Pantalon para mujer (balnco)', precio: 678.55, imagen: 'imagenes/pantalon.jpg', talla: 'M, L, X' },
+    { nombre: 'Pantalon', descripcion: 'Pantalon para mujer (negro)', precio: 678.55, imagen: 'imagenes/pantalon2.jpg', talla: 'M, L, X' },
+    { nombre: 'Pantalon', descripcion: 'Pantalon para mujer (verde)', precio: 678.55, imagen: 'imagenes/pantalon3.jpg', talla: 'M, L, X' },
     { nombre: 'Pantalon', descripcion: 'Pantalon para hombre', precio: 678.55, imagen: 'imagenes/pantalon4.jpg', talla: 'M, L, X' },
     { nombre: 'Pantalon', descripcion: 'Pantalon para mujer', precio: 678.55, imagen: 'imagenes/pantalon5.jpg', talla: 'M, L, X' },
     { nombre: 'Pantalon', descripcion: 'Pantalon ', precio: 678.55, imagen: 'imagenes/pantalon7.jpg', talla: 'M, L, X' },
@@ -512,6 +512,8 @@ function verVestidos(){
         ocultarProductos.style.display = 'none';
     }
 }
-
+function volverArriba() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
 
 

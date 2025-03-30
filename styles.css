@@ -377,6 +377,15 @@ ul{
     display:none;
     visibility: hidden;
 }
+.back-to-top{
+    float: left;
+    margin-left: 40%;
+    margin-top: 5%;
+    font-size: 9px;
+    padding: 4px 8px;
+    background-color: steelblue;
+    color: white;
+}
 
 @media(min-width:1024px){
     .contenedor-principal{
@@ -685,4 +694,15 @@ ul{
         display:none;
         visibility: hidden;
     }
+    .back-to-top{
+        float: left;
+        margin-left:45%;
+        margin-top: 2%;
+        margin-bottom: 2%;
+        font-size: 12px;
+        padding: 5px 10px;
+        background-color: steelblue;
+        color: white;
+    }
+    
 }
